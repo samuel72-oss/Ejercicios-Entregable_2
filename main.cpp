@@ -22,6 +22,8 @@ int main(){
     A2=n*t;
     A3=pow(A1, A2);
     Atotal=P*A3;
+    std::cout<<"El interes compuesto de tu inversion es: "<<Atotal;
+    return 0;
 
 
 
