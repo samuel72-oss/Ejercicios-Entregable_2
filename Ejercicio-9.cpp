@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 int main() {
     int a;
     int b;
@@ -9,6 +10,13 @@ int main() {
     int g=0;
     int h=0;
     int i=0;
+    int p1;
+    int p2;
+    int p3;
+    int p4;
+    int p5;
+    int pt;
+
     std::cout<<"////// Máximo Común Divisor //////"<<std::endl;
     std::cout<<"Ingresa el primer número: ";
     std::cin>>a;
@@ -70,4 +78,14 @@ int main() {
             i++;  
         }
     }
+    p1=pow(2,e);
+    p2=pow(3,f);
+    p3=pow(5,g);
+    p4=pow(7,h);
+    p5=pow(11,i);
+    pt=p1*p2*p3*p4*p5;
+
+    std::cout<<"El maximo comun divisor de "<<at<<" y "<<bt<<" es: "<<pt<<std::endl;
+    
+    return 0;
 }
