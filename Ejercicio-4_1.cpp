@@ -1,12 +1,20 @@
+/*
+Mariana Daza
+Samuel Quesada
+*/
+
 #include <iostream>
+
 int main() {
     int vec[5];
     int suma=0;
     int i=0;
-    std::cout<<"Bienvenido al programa que suma"<<std::endl;
+    std::cout<<"\t==============================="<<std::endl;
+    std::cout<<"\tBienvenido al programa que suma"<<std::endl;
+    std::cout<<"\t==============================="<<std::endl;
 
     while (i<5) {
-        std::cout<<"Ingrese el numero: ";
+        std::cout<<"\nIngrese el numero: ";
         std::cin>>vec[i];
         i=i+1;
         }
@@ -17,5 +25,6 @@ int main() {
         suma= suma + vec[i];
         i=i+1;
         }
-    std::cout<<"La suma de los numeros ingresados es de: "<<suma<<std::end1;
+    std::cout<<"\n\t////// RESULTADOS //////"<<suma<<std::end1;
+    std::cout<<"\nLa suma de los numeros ingresados es de: "<<suma<<std::end1;
 }
