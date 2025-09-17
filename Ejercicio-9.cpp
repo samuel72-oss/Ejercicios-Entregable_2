@@ -1,3 +1,7 @@
+/*
+Mariana Daza
+Samuel Quesada
+*/
 #include <iostream>
 #include <cmath>
 int main() {
@@ -16,9 +20,10 @@ int main() {
     int p4;
     int p5;
     int pt;
-
-    std::cout<<"////// Máximo Común Divisor //////"<<std::endl;
-    std::cout<<"Ingresa el primer número: ";
+    std::cout<<"\t=================================="<<std::endl;
+    std::cout<<"\t////// Máximo Común Divisor //////"<<std::endl;
+    std::cout<<"\t=================================="<<std::endl;
+    std::cout<<"\nIngresa el primer número: ";
     std::cin>>a;
     std::cout<<"Ingresa el segundo número: ";
     std::cin>>b;
@@ -85,7 +90,8 @@ int main() {
     p5=pow(11,i);
     pt=p1*p2*p3*p4*p5;
 
-    std::cout<<"El maximo comun divisor de "<<at<<" y "<<bt<<" es: "<<pt<<std::endl;
+    std::cout<<"\n\t//// RESULTADO ////"<<std::endl;
+    std::cout<<"\nEl maximo comun divisor de "<<at<<" y "<<bt<<" es: "<<pt<<std::endl;
     
     return 0;
 }
