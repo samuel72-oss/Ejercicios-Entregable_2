@@ -2,28 +2,36 @@
 #include <cmath>
 
 int main(){
-    int p;
+    int P;
     float r;
     int n;
     int t;
-    float A1;
-    std::cout<<"////INTERES COMPUESTO////\t"<<std::endl;
-    std::cout<<"Bienvenid@ al programa para calcular el interes compuesto"<<std::endl;
-    std::cout<<"Para iniciar ingresa los siguientes datos:"<<std::endl;
-    std::cout<<"Indica el valor de tu cantidad inicial invertida: ";
+    double A1;
+    int A2;
+    float A3;
+    double Atotal;
+
+    std::cout<<"\t=========================\n"<<std::endl;
+    std::cout<<"\t////INTERES COMPUESTO////\n"<<std::endl;
+    std::cout<<"\t=========================\n"<<std::endl;
+    std::cout<<"Bienvenid@ al programa para calcular el interes compuesto."<<std::endl;
+    std::cout<<"Para empezar ingresa los siguientes datos."<<std::endl;
+    std::cout<<"\nIndica tu capital inicial invertida: ";
     std::cin>>P;
-    std::cout<<"Cual es la tasa de interes anual de tu inversion: ";
+    std::cout<<"\nCual es la tasa de interes anual: ";
     std::cin>>r;
-    std::cout<<"Cuantas veces en el año se aplica el interes: ";
+    std::cout<<"\nNumero de veces en el año se aplica el interes: ";
     std::cin>>n;
-    std::cout<<"De cuantos años es la inversion: ";
+    std::cout<<"\nDe cuantos años es tu inversion: ";
     std::cin>>t;
     A1=1+r/n;
     A2=n*t;
     A3=pow(A1, A2);
     Atotal=P*A3;
-    std::cout<<"El interes compuesto de tu inversion es: "<<Atotal;
+     std::cout<<"\n\t//RESULTADO//"<<std::endl;
+    std::cout<<"\nEl interes compuesto de tu inversion es: "<<Atotal<<std::endl;
     return 0;
+
 
 
 
