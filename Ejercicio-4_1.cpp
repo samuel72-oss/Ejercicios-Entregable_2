@@ -25,6 +25,6 @@ int main() {
         suma= suma + vec[i];
         i=i+1;
         }
-    std::cout<<"\n\t////// RESULTADOS //////"<<suma<<std::end1;
-    std::cout<<"\nLa suma de los numeros ingresados es de: "<<suma<<std::end1;
+    std::cout<<"\n\t////// RESULTADOS //////"<<std::endl;
+    std::cout<<"\nLa suma de los numeros ingresados es de: "<<suma<<std::endl;
 }
