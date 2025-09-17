@@ -1,3 +1,8 @@
+/*
+Mariana Daza
+Samuel Quesada
+*/
+
 #include <iostream>
 #include <cmath>
 
