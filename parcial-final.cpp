@@ -28,12 +28,11 @@ void leerPuntos(Point puntos[], int n)
         std::cin>>respuesta;
         respuesta=tolower(respuesta);
     }
-    
-    // Completar: Verificar si la respuesta es 's' o 'n', tener en cuenta mayúsculas y minúsculas
+
     if (respuesta == <valor a comparar><Operador logico> respuesta == <valor a comparar>)
     {
-        // Completar: Leer las coordenadas de cada punto
-        for ()
+
+        for(int i=0;i<=n;i++)
         {
             std::cout << "Ingrese las coordenadas del punto " << i + 1 << " (x, y): ";
             std::cin >> puntos[].>> puntos;
