@@ -16,7 +16,7 @@ int main(){
     cout<<"================================\n"<<endl;
     while(i<10){
         cout<<"El conductor con el ID: "<<id[i]<<endl;
-        cout<<"por favor ingrese su distancia recorrida(Km): ";
+        cout<<"por favor ingresa tu distancia recorrida(Km): ";
         cin>>dist[i];
         cout<<"Gracias por tu labor"<<endl;
         cout<<"\n";
