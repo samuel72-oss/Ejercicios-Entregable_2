@@ -12,36 +12,41 @@ struct Point
 Teniendo en cuenta que solo necesita leer los valores, pero no modificarlos*/
 double calcularMagnitud(Point p1)
 {
-    double m=sqrt(pow(p1.x,2)+pow(p1.y,2))
+    double m=sqrt(pow(p1.x,2)+pow(p1.y,2));
     return m;
 }
 
 // Función para leer las coordenadas de varios puntos
-void leerPuntos(Point puntos[], int n)
+void leerPuntos(Point puntos[], int &n)
 {
     char respuesta;
     std::cout << "¿Desea ingresar los puntos manualmente? (s/n): ";
     // Leer la respuesta del usuario
     std::cin>>respuesta;
+    respuesta=tolower(respuesta);
     while (respuesta != 's' && respuesta != 'n'){
         std::cout << "Tu respuesta no es valida por favor (s/n): ";
         std::cin>>respuesta;
         respuesta=tolower(respuesta);
     }
 
-    if (respuesta == <valor a comparar><Operador logico> respuesta == <valor a comparar>)
+    if (respuesta == 's')
     {
 
-        for(int i=0;i<=n;i++)
+        for(int i=0;i<n;i++)
         {
             std::cout << "Ingrese las coordenadas del punto " << i + 1 << " (x, y): ";
-            std::cin >> puntos[].>> puntos;
+            std::cin >> puntos[i].x >> puntos[i].y;
         }
     }
     else
     {
         // Usar puntos predeterminados
         std::cout << "Usando puntos predeterminados...\n";
+        std::cout << "Punto 1=(0,0)\n";
+        std::cout << "Punto 2=(3.4)\n";
+        std::cout << "Punto 3=(6,8)\n";
+        std::cout << "Punto 4=(9,12)\n\n";
         puntos[0] = {0, 0};  // Punto 1 (0, 0)
         puntos[1] = {3, 4};  // Punto 2 (3, 4)
         puntos[2] = {6, 8};  // Punto 3 (6, 8)
@@ -56,14 +61,14 @@ double calcularMayorMagnitud(Point puntos[], int n, int &indiceMayorMagnitud)
     double e=0;
     double s;
     double r;
-    while (i<=n){
+    while (i<n){
         s=e;
-        e=sqrt(pow(puntos[i].x, 2)+pow(puntos[i].y, 2))
+        e=sqrt(pow(puntos[i].x, 2)+pow(puntos[i].y, 2));
         if (e>s){
             r=e;
-            indiceMayorMagnitud=i
-        i++
+            indiceMayorMagnitud=i;
         }
+        i++;
     }
 
 
@@ -74,18 +79,20 @@ double calcularMayorMagnitud(Point puntos[], int n, int &indiceMayorMagnitud)
 void mostrarResultado(Point puntos[], int indiceMayorMagnitud, double magnitud)
 {
     std::cout << "El punto más cercano es: (" << puntos[indiceMayorMagnitud].x << ", " << puntos[indiceMayorMagnitud].y << ")\n";
-    std::cout << "La dmayor magnitud de los puntos del arreglo es: " << mayorMagnitud << std::endl;
+    std::cout << "La dmayor magnitud de los puntos del arreglo es: " << magnitud << std::endl;
 }
 
 int main()
 {
-    <tipo> n;
+    int n;
 
+    std::cout << "\t\t\t////// ¡URGENTE! ////// \n";
+    std::cout << "Si quieres crear puntos automaticamente, en la siguiente linea escribe -> '4' \n";
     std::cout << "Ingrese el número de puntos (mínimo 2): ";
     // Leer el número de puntos
-    std::<funcion> >> n;
+    std::cin>>n;
 
-    if ()
+    if (n<2)
     {
         std::cout << "Se necesitan al menos 2 puntos para determinar la mayor magnitud.\n";
         return 1;
@@ -94,13 +101,14 @@ int main()
     Point puntos[n]; // Arreglo de estructuras para almacenar las coordenadas (x, y)
 
     // Leer los puntos (manual o predeterminado)
-    leerPuntos(<completar argumentos>);
+    leerPuntos(puntos, n);
 
     // Calcular mayor magnitud
-    <type> indiceMayorMagnitud;
-    // llamar funcion
+    int indiceMayorMagnitud;
+    double magnitud = calcularMayorMagnitud(puntos, n, indiceMayorMagnitud);
     //  Mostrar el resultado
-    mostrarResultado(puntos, <variable>, mayorMagnitud);
+    mostrarResultado(puntos, indiceMayorMagnitud, magnitud);
 
     return 0;
 }
+ 
