@@ -12,9 +12,8 @@ struct Point
 Teniendo en cuenta que solo necesita leer los valores, pero no modificarlos*/
 double calcularMagnitud(Point p1)
 {
-    // Completar: Usar la fórmula de magnitud
-    // sugerencia: puede hacer uso de funcionines como sqrt y pow
-    return;
+    double m=sqrt(pow(p1.x,2)+pow(p1.y,2))
+    return m;
 }
 
 // Función para leer las coordenadas de varios puntos
