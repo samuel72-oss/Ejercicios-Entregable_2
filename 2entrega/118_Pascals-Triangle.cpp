@@ -18,5 +18,14 @@ int main() {
         }
         i++;
     }
-
+    i = 0;
+    while (i < fil) {
+        int j = 0;
+        while (j <= i) {
+            cout << pascal[i][j] << " ";
+            j++;
+        }
+        cout << endl;
+        i++;
+    }
 }
