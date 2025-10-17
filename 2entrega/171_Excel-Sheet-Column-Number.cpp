@@ -10,4 +10,11 @@ int main() {
      char c;
      cout<<"Ingrese la columna que desea convertir a número (Use mayúsculas): ";
      cin>>col;
+     while(col[i] != '\0'){
+        c=col[i];
+        valor = c - 'A' + 1;
+        num = num * 26 + valor; 
+        i++;
+     }
+     cout<<"La columna "<<col<<" se convierte a número: "<<num<<endl;
 }
