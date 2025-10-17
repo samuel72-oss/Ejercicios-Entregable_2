@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 
-
-
 int main(){
     int i=0;
     int id[10]={245,645,867,123,564,768,987,555,324,115};
@@ -43,8 +41,4 @@ int main(){
     cout<<"\tLa distancia total recorrida por los conductores fue de: "<<suma<<"Km"<<endl;
     cout<<"\t\tGRACIAS (nos esforzamos mucho)"<<endl;
     
-
-
-
-
 }

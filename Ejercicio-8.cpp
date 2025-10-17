@@ -1,43 +1,87 @@
-/*
-Mariana Daza
-Samuel Quesada
-*/
-
 #include <iostream>
-#include <cmath>
+using namespace std;
 
-int main(){
-    int P;
-    float r;
-    int n;
-    int t;
-    double A1;
-    int A2;
-    float A3;
-    double Atotal;
+float add(float a, float b)
+{
+    
+    return a + b;
+}
 
-    std::cout<<"\t=========================\n"<<std::endl;
-    std::cout<<"\t////INTERES COMPUESTO////\n"<<std::endl;
-    std::cout<<"\t=========================\n"<<std::endl;
-    std::cout<<"Bienvenid@ al programa para calcular el interes compuesto."<<std::endl;
-    std::cout<<"Para empezar ingresa los siguientes datos."<<std::endl;
-    std::cout<<"\nIndica tu capital inicial invertida: ";
-    std::cin>>P;
-    std::cout<<"\nCual es la tasa de interes anual: ";
-    std::cin>>r;
-    std::cout<<"\nNumero de veces en el año se aplica el interes: ";
-    std::cin>>n;
-    std::cout<<"\nDe cuantos años es tu inversion: ";
-    std::cin>>t;
-    A1=1+r/n;
-    A2=n*t;
-    A3=pow(A1, A2);
-    Atotal=P*A3;
-     std::cout<<"\n\t//RESULTADO//"<<std::endl;
-    std::cout<<"\nEl interes compuesto de tu inversion es: "<<Atotal<<std::endl;
-    return 0;
+float mult(float a, float b)
+{
+    return a * b;
+}
 
+float resta(float a, float b)
+{
+    return a - b;
+}
 
+float divis(float a, float b)
+{
+    return a / b;
+}
 
+void performOperation(float (*callback)(float, float), float x, float y)
+{
+    cout << "----------------------" << callback(x, y) << "----------------------"<< endl;
+    
+}
+
+int main()
+{
+    float a;
+    float b;
+    char c;
+    cout<<"/////////////////////////////////////////////////////////"<<endl;
+    cout<<"\tBienvenido al programa que opera números"<<endl;
+    cout<<"/////////////////////////////////////////////////////////"<<endl;
+    cout<<"Digita el primer número: ";
+    cin>>a;
+    if(cin.fail()){
+        cout<<"¡¡¡¡¡¡ERROR DEL USUARIO!!!!!!"<<endl;
+        cout<<"El usuario no digito un numero"<<endl;
+    }
+    else{
+        cout<<"Escribe el segundo número: ";
+        cin>>b;
+        if(cin.fail()){
+            cout<<"¡¡¡¡¡¡ERROR DEL USUARIO!!!!!!"<<endl;
+            cout<<"El usuario no digito un numero"<<endl;
+        }
+        else{
+
+        cout<<"Que operación deseas realizar? (+),(-),(*),(/) ";
+        cin>>c;
+
+            if (c != '+' && c != '-' && c != '*' && c != '/') {
+                cout<<"¡¡¡¡¡¡ERROR DEL USUARIO!!!!!!"<<endl;
+                cout << "Error en la digitación del operador\n";
+            }
+
+            if (c=='+'){
+                cout<<"El resultado de tu operación solicitada (+) es: "<<endl;
+                performOperation(add, a, b);
+            }
+            else if (c=='-'){
+                cout<<"El resultado de tu operación solicitada (-) es: "<<endl;
+                performOperation(resta, a, b);
+            }
+            else if (c=='*'){
+                cout<<"El resultado de tu operación solicitada (*) es: "<<endl;
+                performOperation(mult, a, b);
+            }
+            else if (c=='/'){
+                if (b!=0){
+                    cout<<"El resultado de tu operación solicitada (/) es: "<<endl;
+                    performOperation(divis, a, b);
+                }
+                else {
+                    cout<<"¡¡¡¡¡¡ERROR DEL USUARIO!!!!!!"<<endl;
+                    cout<<"No se puede dividir entre 0: Tu resultado es INDETERMINADO"<<endl;
+                }
+            }
+        }
+    }
 
 }
