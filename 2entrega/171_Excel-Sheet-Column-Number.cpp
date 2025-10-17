@@ -8,4 +8,6 @@ int main() {
      int i=0;
      int valor;
      char c;
+     cout<<"Ingrese la columna que desea convertir a número (Use mayúsculas): ";
+     cin>>col;
 }
