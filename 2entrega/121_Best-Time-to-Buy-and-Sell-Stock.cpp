@@ -35,4 +35,21 @@ int main(){
         cin>>ss[i];
         i++;
     }
+    i=0;
+    int b=0;
+    while(i<n){
+        j=i+1;
+        while(j<n){
+            b=ss[j]-ss[i];
+            if(b>0 && b>gan){
+                com=ss[i];
+                ven=ss[j];
+                ii=i;
+                jj=j;
+                gan=b;
+            }
+            j++;
+        }
+        i++;
+    }
 }
