@@ -52,4 +52,17 @@ int main(){
         }
         i++;
     }
+    if(gan!=0){
+        cout<<"\n\t-- -- -- -- -- -- -- -- -- -- --"<<endl;
+        cout<<"\tRESULTADOS FINALES DEL PROGRAMA"<<endl;
+        cout<<"\t-- -- -- -- -- -- -- -- -- -- --\n"<<endl;
+        cout<<"El usuario debe comprar el dia "<<ii+1<<" Y debe vender en el dia "<<jj+1<<endl;
+        cout<<"De esta manera el usuario compraria al precio de $"<<com<<" y lo venderia a $"<<ven<<endl;
+        cout<<"Generandole una ganancia de $"<<gan<<endl;
+    }
+    else{
+        cout<<"\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"<<endl;
+        cout<<"CON LOS DATOS INGRESADOS ES IMPOSIBLE OBTENER UNA GANANCIA"<<endl;
+        cout<<"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"<<endl;
+    }
 }
